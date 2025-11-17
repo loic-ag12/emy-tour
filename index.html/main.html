@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EMY-TOUR — Votre voyage commence ici</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- CSS externe -->
+  <link rel="stylesheet" href="/Users/macbookpro/Desktop/EMY-TOUR/style.css/style.css">
+
+  <meta name="description" content="EMY-TOUR — Billets d'avion. Présentation des destinations phares, contact et réseaux sociaux.">
+</head>
+<body>
+
+  <!-- HEADER / NAV -->
+  <header class="site-header" id="header">
+    <div class="container nav" role="navigation" aria-label="Navigation principale">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">ET</div>
+        <div class="brand-text">
+          <h2>EMY-TOUR</h2>
+          <small>Agence de voyage</small>
+        </div>
+      </div>
+
+      <nav class="desktop-nav" aria-label="Menu principal">
+        <ul id="mainMenu">
+          <li><a href="#home" class="nav-link active">Accueil</a></li>
+          <li><a href="#destinations" class="nav-link">Destinations</a></li>
+          <li><a href="#testimonials" class="nav-link">Témoignages</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+    <!--<div class="nav-right">
+        <a class="call" href="tel:+237000000000" title="Appeler EMY-TOUR">
+          <i class="fas fa-phone"></i> +237 XXX XXX XXX
+        </a>
+-->  
+        <button class="nav-toggle" id="openNav" aria-label="Ouvrir le menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- OVERLAY MOBILE -->
+  <div id="mobileOverlay" class="mobile-overlay"></div>
+
+  <!-- MOBILE NAV -->
+  <div id="mobileNav" class="mobile-nav" aria-hidden="true">
+    <div class="mobile-nav-header">
+      <h3 class="mobile-nav-title">Menu</h3>
+      <button id="closeNav" class="close-mobile" aria-label="Fermer le menu">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    
+    <nav aria-label="Navigation mobile">
+      <ul>
+        <li><a href="#home" class="mobile-link active"><i class="fas fa-home"></i> Accueil</a></li>
+        <li><a href="#destinations" class="mobile-link"><i class="fas fa-map-marked-alt"></i> Destinations</a></li>
+        <li><a href="#testimonials" class="mobile-link"><i class="fas fa-star"></i> Témoignages</a></li>
+        <li><a href="#faq" class="mobile-link"><i class="fas fa-question-circle"></i> FAQ</a></li>
+        <li><a href="#contact" class="mobile-link"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="mobile-contact-info">
+      <h4><i class="fas fa-phone-alt"></i> Contactez-nous</h4>
+      <p><i class="fas fa-phone"></i> <a href="tel:+237000000000">+237 XXX XXX XXX</a></p>
+      <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/237000000000">WhatsApp</a></p>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <main id="home">
+    <section class="hero" role="banner" aria-label="Bannière principale">
+      <div class="hero-inner container">
+        <span class="eyebrow">Vols – Billets d'avion</span>
+        <h1>EMY-TOUR — Votre voyage commence ici</h1>
+        <p>Des destinations soigneusement sélectionnées. Un service simple et élégant pour préparer vos plus beaux souvenirs.</p>
+
+        <div class="cta" role="group" aria-label="Actions principales">
+          <button class="btn" onclick="document.getElementById('destinations').scrollIntoView({behavior:'smooth'})">
+            <i class="fas fa-plane"></i> Découvrir les destinations
+          </button>
+          <a class="btn secondary" href="#contact">Contactez-nous</a>
+          <small>Pas de réservation en ligne — Informations & contact</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESTINATIONS -->
+    <section id="destinations" class="section container" aria-labelledby="destinations-title">
+      <h2 id="destinations-title">
+        <span class="icon-wrapper"><i class="fas fa-globe-africa section-icon"></i></span> 
+        Nos Destinations phares
+      </h2>
+      <p class="lead">Partez à la découverte des lieux les plus prisés — des escapades citadines aux havres de paix tropicaux.</p>
+
+      <!-- Filter buttons 
+      <div class="filters" id="filters">
+        <button class="filter-btn active" data-filter="all">Toutes</button>
+        <button class="filter-btn" data-filter="europe">Europe</button>
+        <button class="filter-btn" data-filter="amerique">Amérique</button>
+        <button class="filter-btn" data-filter="asie">Asie</button>
+        <button class="filter-btn" data-filter="moyen-orient">Moyen-Orient</button>
+      </div> -->
+
+      <div class="grid" id="grid" role="list">
+        <!-- Card Paris -->
+        <article class="card" role="listitem" aria-label="Paris" data-category="europe">
+          <div class="thumb">
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600" alt="Paris - Tour Eiffel">
+          </div>
+          <div class="card-body">
+            <h3>Paris</h3>
+            <p>La ville lumière vous attend : musées, cafés et promenades le long de la Seine.</p>
+            <div class="card-footer">
+              
+            </div>
+          </div>
+        </article>
+
+<!-- Card TEL AVIV -->
+        <article class="card" role="listitem" aria-label="Rome" data-category="europe">
+          <div class="thumb">
+            <img src="https://images.unsplash.com/photo-1500990702037-7620ccb6a60a?w=600" alt="Rome - Colisée">
+          </div>
+          <div class="card-body">
+            <h3>Tel-Aviv</h3>
+            <p>Ses plages,son climat méditerranéen et son architecture bauhaus(classée au patrimoine mondial de L'UNESCO).</p>
+            <div class="card-footer">
+             
+            </div>
+          </div>
+        </article>
+        
+        <!-- Card Dubai -->
+        <article class="card" role="listitem" aria-label="Dubaï" data-category="moyen-orient">
+          <div class="thumb">
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600" alt="Dubaï - Skyline">
+          </div>
+          <div class="card-body">
+            <h3>Dubaï</h3>
+            <p>Modernité, architecture impressionnante et expériences luxueuses au cœur du désert.</p>
+            <div class="card-footer">
+              
+            </div>
+          </div>
+        </article>
+
+        <!-- Card New York -->
+        <article class="card" role="listitem" aria-label="New York" data-category="amerique">
+          <div class="thumb">
+            <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=600" alt="New York - Manhattan">
+          </div>
+          <div class="card-body">
+            <h3>New York</h3>
+            <p>Vivez l'énergie de la Grosse Pomme : culture, spectacles et rues iconiques.</p>
+            <div class="card-footer">
+            
+            </div>
+          </div>
+        </article>
+
+        <!-- Card Bali -->
+        <article class="card" role="listitem" aria-label="Bali" data-category="asie">
+          <div class="thumb">
+            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600" alt="Bali - Plage">
+          </div>
+          <div class="card-body">
+            <h3>Bali</h3>
+            <p>Plages, rizières et détente : une île pour se ressourcer et se reconnecter.</p>
+            <div class="card-footer">
+                  
+            </div>
+          </div>
+        </article>
+
+        
+         <!-- Card Rome -->
+         <article class="card" role="listitem" aria-label="Rome" data-category="europe">
+          <div class="thumb">
+            <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=600" alt="Rome - Colisée">
+          </div>
+          <div class="card-body">
+            <h3>Rome</h3>
+            <p>Découvrez l'histoire millénaire de la Ville Éternelle et ses trésors architecturaux.</p>
+            <div class="card-footer">
+             
+            </div>
+          </div>
+        </article>
+          
+         <!-- Card Ankara -->
+         <article class="card" role="listitem" aria-label="Rome" data-category="europe">
+          <div class="thumb">
+            <img src="https://images.unsplash.com/photo-1589480592010-51e535ad32a4?w=600" alt="Rome - Colisée">
+          </div>
+          <div class="card-body">
+            <h3>Ankara</h3>
+            <p>Destination idéale si tu veux découvrir la vraie Turquie, au-delà du tourism de façade.</p>
+            <div class="card-footer">
+             
+            </div>
+          </div>
+        </article>
+
+
+        <!-- Card Tokyo -->
+        <article class="card" role="listitem" aria-label="Tokyo" data-category="asie">
+          <div class="thumb">
+            <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600" alt="Tokyo - Shibuya">
+          </div>
+          <div class="card-body">
+            <h3>Tokyo</h3>
+            <p>Plongez dans le mélange unique de tradition et de modernité de la capitale japonaise.</p>
+            <div class="card-footer">
+            
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="section testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <h2 id="testimonials-title" style="text-align:center">
+          <span class="icon-wrapper"><i class="fas fa-star section-icon"></i></span> 
+          Témoignages
+        </h2>
+        <p class="lead" style="text-align:center">Ce que nos clients disent de nous</p>
+
+        <div class="testimonial-slider" id="testimonialSlider">
+          <div class="testimonial active" data-index="0">
+            <p class="testimonial-text">"EMY-TOUR a rendu mon voyage à Paris incroyablement simple. Le service personnalisé et l'attention aux détails ont fait toute la différence."</p>
+            <div class="testimonial-author">Marie L.</div>
+            <div class="testimonial-role">Voyage à Paris</div>
+          </div>
+
+          <div class="testimonial" data-index="1">
+            <p class="testimonial-text">"Notre lune de miel à Bali était parfaite grâce aux conseils avisés de l'équipe EMY-TOUR. Ils ont pensé à tout."</p>
+            <div class="testimonial-author">Paul & Sophie D.</div>
+            <div class="testimonial-role">Lune de miel à Bali</div>
+          </div>
+
+          <div class="testimonial" data-index="2">
+            <p class="testimonial-text">"Service professionnel et réactif. J'ai obtenu mon billet pour New York en un temps record, avec un excellent rapport qualité-prix."</p>
+            <div class="testimonial-author">Thomas K.</div>
+            <div class="testimonial-role">Voyage d'affaires</div>
+          </div>
+
+          <div class="testimonial-nav" id="testimonialNav">
+            <div class="testimonial-dot active" data-index="0"></div>
+            <div class="testimonial-dot" data-index="1"></div>
+            <div class="testimonial-dot" data-index="2"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section container" aria-labelledby="faq-title">
+      <h2 id="faq-title">
+        <span class="icon-wrapper"><i class="fas fa-question-circle section-icon"></i></span> 
+        Questions fréquentes
+      </h2>
+      <p class="lead">Trouvez rapidement des réponses à vos interrogations</p>
+
+      <div class="faq-list" id="faqList">
+        <div class="faq-item">
+          <div class="faq-question">
+            Comment réserver un billet d'avion ?
+            <span class="faq-icon">▼</span>
+          </div>
+          <div class="faq-answer">
+            Contactez-nous par téléphone, email ou via WhatsApp. Notre équipe vous guidera dans le processus de réservation et vous proposera les meilleures options selon vos besoins.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            Quels modes de paiement acceptez-vous ?
+            <span class="faq-icon">▼</span>
+          </div>
+          <div class="faq-answer">
+            Nous acceptons les paiements en espèces, par virement bancaire, mobile money (Orange Money, MTN Mobile Money) et cartes de crédit (avec frais supplémentaires).
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            Proposez-vous des services de visa ?
+            <span class="faq-icon">▼</span>
+          </div>
+          <div class="faq-answer">
+            Oui, nous pouvons vous assister dans les démarches d'obtention de visa pour la plupart des destinations. Des frais supplémentaires peuvent s'appliquer.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            Quelle est la durée de traitement d'une réservation ?
+            <span class="faq-icon">▼</span>
+          </div>
+          <div class="faq-answer">
+            Une fois le paiement confirmé, nous traitons généralement les réservations dans un délai de 24 à 48 heures. Les billets électroniques vous sont ensuite envoyés par email.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            Que faire en cas d'annulation ou de modification ?
+            <span class="faq-icon">▼</span>
+          </div>
+          <div class="faq-answer">
+            Contactez-nous dès que possible. Les conditions d'annulation et de modification varient selon les compagnies aériennes et le type de billet. Nous vous assisterons dans ces démarches.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title">
+          <span class="icon-wrapper"><i class="fas fa-phone-alt section-icon"></i></span> 
+          Contactez-nous
+        </h2>
+        <p class="lead">Questions, demandes spéciales ou partenariats — nous sommes là pour vous aider.</p>
+
+        <div class="contact-grid" role="region" aria-label="Section contact">
+          <div class="contact-card">
+            <h3 style="margin-top:0">Contact rapide</h3>
+            <ul class="contact-list">
+              <li>
+                <i class="fas fa-phone-alt" style="color:var(--blue)"></i> 
+                Téléphone : 
+                <span class="muted">&nbsp;<a href="tel:+237677252994">+237677252994</a></span>
+                <p><span class="muted">&nbsp;<a href="tel:+237690616239">+237690616239</a></span></p>
+                <p><span class="muted">&nbsp;<a href="tel:+237690214325">+237690214325</a></span></p>
+              </li>
+              <li>
+                <i class="fas fa-envelope" style="color:var(--orange)"></i> 
+                Email : 
+                <span class="muted">&nbsp;<a href="mailto:contact@emy-tour.com">contact@emy-tour.com</a></span>
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt" style="color:var(--green)"></i> 
+                Adresse : 
+                <span class="muted">&nbsp;Yaoundé, Cameroun</span>
+              </li>
+            </ul>
+
+            <p style="margin-top:16px;color:var(--muted)">
+              <i class="far fa-clock"></i> Horaires : Lun-Sam 08:00 – 18:00
+            </p>
+
+            <div style="margin-top:18px">
+              <h4 style="margin:0 0 8px"><i class="fas fa-handshake"></i> Partenariats</h4>
+              <p class="muted" style="margin:0">
+                Pour partenariats : <a href="mailto:partenariats@emy-tour.com">partenariats@emy-tour.com</a>
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <div class="contact-card" style="margin-bottom:16px">
+              <h3 style="margin-top:0">Envoyer un message</h3>
+              <form id="contactForm" novalidate>
+                <div class="field">
+                  <label class="muted" for="name"><i class="far fa-user"></i> Nom</label>
+                  <input id="name" name="name" type="text" placeholder="Votre nom" required>
+                  <div class="error-message">Ce champ est requis.</div>
+                </div>
+                <div class="field">
+                  <label class="muted" for="email"><i class="far fa-envelope"></i> Email</label>
+                  <input id="email" name="email" type="email" placeholder="vous@exemple.com" required>
+                  <div class="error-message">Veuillez entrer un email valide.</div>
+                </div>
+                <div class="field">
+                  <label class="muted" for="message"><i class="far fa-comment-alt"></i> Message</label>
+                  <textarea id="message" name="message" placeholder="Dites-nous en plus..." rows="4" required></textarea>
+                  <div class="error-message">Ce champ est requis.</div>
+                </div>
+                <div style="display:flex; flex-direction:column; gap:8px; align-items:flex-start;">
+                  <button type="submit" class="btn-primary">
+                    <span class="loader" style="display:none"></span>
+                    <i class="fas fa-paper-plane"></i> Envoyer le message
+                  </button>
+                  <span class="muted" style="font-size:.9rem">Nous répondrons sous 48h</span>
+                </div>
+                <div class="success-message" id="successMessage">Merci ! Votre message a été envoyé.</div>
+              </form>
+            </div>
+
+            <div class="contact-card" style="text-align:center">
+              <h4 style="margin:0 0 10px">
+                <i class="fab fa-whatsapp" style="color:var(--green)"></i> 
+                Besoin d'une réponse immédiate ?
+              </h4>
+              <p class="muted" style="margin:0 0 12px">Contactez-nous via WhatsApp</p>
+              <a href="https://wa.me/237690214325" target="_blank" rel="noopener" class="btn" style="background:linear-gradient(90deg,var(--green),var(--blue));color:white"> 
+                <i class="fab fa-whatsapp"></i> WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SOCIALS -->
+  <section class="section" style="padding-top:18px;padding-bottom:18px">
+    <div class="container" style="text-align:center">
+      <h2><i class="fas fa-link section-icon"></i> Retrouvez-nous</h2>
+      <p class="lead">Suivez-nous pour inspirations de voyage, photos et offres.</p>
+      <div class="socials" style="margin-top:18px">
+        <a href="#" aria-label="Facebook" title="Facebook">
+          <i class="fab fa-facebook-f" style="color:#1877F2"></i>
+        </a>
+        <a href="#" aria-label="Instagram" title="Instagram">
+          <i class="fab fa-instagram" style="color:#E4405F"></i>
+        </a>
+        <a href="https://wa.me/237690214325" aria-label="WhatsApp" title="WhatsApp">
+          <i class="fab fa-whatsapp" style="color:#25D366"></i>
+        </a>
+        <!--<a href="#" aria-label="LinkedIn" title="LinkedIn">
+          <i class="fab fa-linkedin-in" style="color:#0A66C2"></i>
+        </a>-->
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div style="display:flex;gap:16px;align-items:center;justify-content:center;margin-bottom:12px">
+        <div class="logo" style="width:40px;height:40px;font-size:15px">ET</div>
+        <div style="text-align:left">
+          <strong>EMY-TOUR</strong><br>
+          <small class="muted">Agence de voyage — Billets d'avion</small>
+        </div>
+      </div>
+      <small>© <span id="year"></span> EMY-TOUR — Tous droits réservés</small>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <div id="backToTop" class="back-to-top" title="Haut de page" aria-label="Retour en haut">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <!-- JavaScript externe -->
+  <script src="/Users/macbookpro/Desktop/EMY-TOUR/index.js/index.js"></script>
+</body>
+</html>
